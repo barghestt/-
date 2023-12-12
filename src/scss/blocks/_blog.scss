@@ -1,0 +1,39 @@
+.blog {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: $pale-white;
+    @include mediaPhone{
+        padding: 50px 0;
+    }
+
+}
+
+.blog__wrp {
+    text-align: center;
+}
+.blog__note {
+    margin-bottom: 8px;
+}
+
+.blog__title {
+    margin-bottom: 40px;
+    @include mediaPhone{
+        margin-bottom: 32px;
+    }
+}
+
+.blog__places {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 20px;
+    margin-bottom: 50px;
+    @include mediaTablet{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-bottom: 32px;
+    }
+}
+
+.blog__btn {
+
+}

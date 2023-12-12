@@ -1,0 +1,91 @@
+.place {
+    display: flex;
+    padding: 16px;
+    max-width: 580px;
+    background-color: #FDFDFD;
+    border-radius: 10px;
+    transition: all .2s ease-in;
+    &:hover{
+        box-shadow: 0px 0px 12px 0px rgba(18, 30, 31, 0.2);
+        transform: translateY(-10px);
+    }
+    @include mediaTablet{
+        width: 100%;
+    }
+    @include mediaPhone{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        padding: 16px 0;
+    }
+}
+
+.place__img {
+    width: 230px;
+    height: 280px;
+    margin-right: 24px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    @include mediaPhone{
+        margin-right: 0;
+        & img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.place__content{
+    text-align: left;
+    position: relative;
+    flex-grow: 2;
+    @include mediaPhone{
+        padding: 0 16px;
+        width: 100%;
+    }
+}
+.place__title {
+    @include font-size(24px,700,1.33);
+    //display: block;
+    width: 100%;
+    color: #18121E;
+    transition: color .2s ease-in;
+    &:hover{
+        color: $dark-green;
+        text-decoration: underline;
+    }
+}
+.place__text {
+    max-height: 116px;
+    margin: 24px 0;
+    @include font-size(14px,400,1.42);
+    overflow: hidden;
+    //line-height: 1.42;
+    @include mediaPhone{
+        margin-bottom: 32px;
+    }
+
+}
+.place__bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include mediaPhone{
+        padding: 0 16px;
+    }
+}
+.place__date {
+    @include font-size(14px,700,1.42);
+    color: $accent;
+}
+.place__read {
+    @include font-size(14px,700,1.42);
+    color: $dark-green;
+    &:hover{
+        text-decoration: underline;
+    }
+}

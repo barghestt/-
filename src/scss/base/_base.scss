@@ -1,0 +1,57 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $font-main;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  color: $black;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  font-weight: 600;
+  font-family: $font-main;
+  color: #18121E;
+}
+
+.title-1 {
+  font-family: $font-main;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.title-2 {
+  font-family: $font-main;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  @include mediaPhone{
+    @include font-size(24px,800,1.2);
+    margin-bottom: 32px;
+    text-align: left;
+  }
+}
+
+.note{
+    font-size: 24px;
+    line-height: 0.83;
+    color: $accent;
+    @include mediaPhone{
+      @include font-size(16px,400,1.25);
+      text-align: left;
+    }
+    
+}
+.d-none{
+  display: none;
+}
+// .text{
+//   font-family: $font-main;
+// }

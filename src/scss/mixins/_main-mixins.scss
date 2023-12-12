@@ -1,0 +1,33 @@
+@mixin font-size(
+  $font-size,
+  $font-wegiht: 400,
+  $line-height: normal,
+  $letter-spacing: normal
+) {
+  font-size: $font-size;
+  font-weight: $font-wegiht;
+  // font-size: $font-size * 0.1rem;
+  // example using rem values and 62.5% font-size so 1rem = 10px
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height;
+  }
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: $letter-spacing;
+  }
+}
+
+@mixin mediaTablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mediaPhone {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}

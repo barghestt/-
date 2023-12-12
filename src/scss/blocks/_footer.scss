@@ -1,0 +1,109 @@
+.footer{
+    background-color: $dark-green;
+    position: relative;
+}
+
+.footer__mailing{
+}
+
+.footer__wrp{
+    display: flex;
+    padding: 178px 0 80px;
+    justify-content: space-between;
+    color: $white;
+    @include mediaTablet{
+        padding: 50px 0 80px;
+    }
+    @include mediaPhone{
+        flex-direction: column;
+        row-gap: 50px;
+    }
+}
+.footer__comp {
+    max-width: 480px;
+    margin-right: 20px;
+    @include mediaTablet{
+        margin-right: 10px;
+    }
+}
+.footer__title {
+
+    @include font-size(20px,700,1.2);
+    margin-bottom:  17px;
+}
+.footer__text {
+    margin-bottom: 80px;
+    font-size: 14px;
+    @include mediaPhone{
+        margin-bottom: 30px;
+    }
+}
+.footer__contact {
+    @include font-size(14px,600,1.28);
+    margin-bottom: 32px;
+}
+.footer__mail {
+    display: inline-block;
+    margin-right: 24px;
+    color: $white;
+    transition: .2s ease-in;
+    &:hover{
+        color: $accent;
+    }
+}
+.footer__numb {
+    display: inline-block;
+    color: $white;
+    transition: .2s ease-in;
+    &:hover{
+        color: $accent;
+    }
+}
+.footer__socials {
+    display: flex;
+    column-gap: 16px;
+}
+.footer__socials-item {
+    width: 24px;
+    height: 24px;
+    transition: .2s ease-in;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+.footer__col {
+    max-width: 280px;
+}
+.footer__col + .footer__col{
+    margin-left: 10px;
+}
+
+.footer__bot {
+    padding: 24px 0;
+    background-color: #18121E;
+    @include mediaPhone{
+        padding: 20px;
+    }
+}
+.footer__bot-text {
+    @include font-size(14px,600,1.28);
+    color: $white;
+}
+.footer__bot-link {
+    @include font-size(14px,600,1.28);
+    color: $white;
+    text-decoration: underline !important;
+    transition: .2s ease-in;
+    &:hover{
+        color: $accent;
+    }
+}
+.footer__bot-wrp{
+    display: flex;
+    justify-content: space-between;
+    @include mediaPhone{
+        text-align: center;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+}

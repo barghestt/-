@@ -1,0 +1,138 @@
+.header {
+  background-image: url("./../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 16px;
+  padding-bottom: 82px;
+  color: $white;
+  @include mediaPhone{
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+.header__top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  @include mediaTablet{
+    column-gap: 15px;
+  }
+  
+}
+
+.header__top-row.header__top-row_mobile {
+  .btn{
+    display: none;
+  }
+  .header__mobile-list{
+    display: block;
+  }
+  .header__nav-btn{
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 6;
+  }
+}
+.header__nav-btn{
+  display: none;
+  @include mediaPhone {
+    display: block;
+  }
+}
+
+.header__mobile-list{
+  padding: 50px 16px 0;
+ // position: relative;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $dark-green;
+  z-index: 5;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  @include mediaTablet {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  @include mediaPhone{
+    justify-content: flex-end;
+  }
+}
+.header__nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 24px;
+  @include mediaTablet {
+    column-gap: 10px;
+  }
+    @include mediaPhone {
+    display: none;
+  }
+}
+.header__nav-item {
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    width: 0px;
+    height: 2px;
+    background-color: $white;
+    border-radius: 4px;
+    transition: width 0.2s ease-in;
+  }
+  &:hover{
+    .header__nav-link{
+      color: $accent;
+    }
+    &::before{
+      width: 100%;
+      background-color: $accent;
+    }
+  }
+}
+.header__nav-link {
+  font-weight: 600;
+  line-height: 1.36;
+  color: $white;
+}
+.header__btn {
+  margin-left: 50px;
+  @include mediaTablet{
+    display: none;
+  }
+
+}
+
+.header__content {
+  margin-top: 463px;
+  @include mediaPhone {
+    margin-top: 234px;
+  }
+}
+
+.header__title {
+  max-width: 1080px;
+  margin-bottom: 41px;
+  text-transform: uppercase;
+  @include mediaPhone {
+    font-size: 28px;
+  }
+}
+.header__form-wrp {
+}
+
+.header__content-text {
+  
+}
